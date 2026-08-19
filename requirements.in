@@ -1,0 +1,6 @@
+# Direct runtime dependencies. Regenerate requirements.txt as documented in README.md.
+numpy==2.5.2
+onnxruntime==1.28.0
+opencv-python==5.0.0.93
+pillow==12.3.0
+rapidocr==3.9.2

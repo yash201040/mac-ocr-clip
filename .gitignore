@@ -1,0 +1,36 @@
+# Local runtime state
+.venv/
+*.log
+debug/
+
+# Python caches and test reports
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.nox/
+.tox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Packaging output
+build/
+dist/
+*.egg-info/
+
+# Editor and macOS metadata
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environment overrides and secrets
+.env
+.env.*
+!.env.example
