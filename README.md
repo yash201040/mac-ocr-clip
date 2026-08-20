@@ -19,7 +19,7 @@ Requirements:
 - [uv](https://docs.astral.sh/uv/getting-started/installation/) (`brew install uv`)
 - The built-in Shortcuts app
 
-Clone this repo at `~`, then run:
+Clone this repo at root user `~`, then run:
 
 ```bash
 cd "$HOME/mac-ocr-clip"
@@ -49,7 +49,7 @@ Use these actions in this order inside the macOS Shortcuts app:
   - Show More → Selection: **Custom**
 2. **Run Shell Script**
   - Shell: `/bin/bash`
-  - Script: `"$HOME/.ocr-env/trigger.sh"`
+  - Script: `"$HOME/mac-ocr-clip/trigger.sh"`
   - Input: the result of **Take Screenshot**
   - Pass input: **to stdin**
 3. **Copy to Clipboard**
@@ -71,13 +71,13 @@ Assign the finished Shortcut to the desired keyboard shortcut or Touch Bar butto
 Run an interactive area capture and copy its OCR text:
 
 ```bash
-"$HOME/.ocr-env/trigger.sh"
+"$HOME/mac-ocr-clip/trigger.sh"
 ```
 
 OCR an existing image and print it without changing the clipboard:
 
 ```bash
-"$HOME/.ocr-env/trigger.sh" "/path/to/image.png"
+"$HOME/mac-ocr-clip/trigger.sh" "/path/to/image.png"
 ```
 
 The clipboard and its notification are reserved for captures this tool starts
@@ -88,7 +88,7 @@ and for the Shortcut, which copies the printed result itself.
 The normal setup command also repairs dependency drift and runs every check:
 
 ```bash
-cd "$HOME/.ocr-env"
+cd "$HOME/mac-ocr-clip"
 ./setup.sh
 ```
 
@@ -105,7 +105,7 @@ ignored by Git.
 
 ## Troubleshooting
 
-Failures are appended to `~/.ocr-env/smartocr.log`; the file is created only
+Failures are appended to `~/mac-ocr-clip/smartocr.log`; the file is created only
 when needed.
 
 - **No clipboard text:** confirm that **Copy to Clipboard** receives **Shell
@@ -114,7 +114,7 @@ Script Result**.
 arguments**.
 - **Could not create image from rect:** use Shortcuts' native **Take
 Screenshot** action instead of shelling out to `screencapture`.
-- **Smart OCR is not installed:** run `/bin/bash "$HOME/.ocr-env/setup.sh"`.
+- **Smart OCR is not installed:** run `/bin/bash "$HOME/mac-ocr-clip/setup.sh"`.
 - **Terminal capture is denied:** allow Terminal under System Settings →
 Privacy & Security → Screen & System Audio Recording.
 
