@@ -19,10 +19,10 @@ Requirements:
 - [uv](https://docs.astral.sh/uv/getting-started/installation/) (`brew install uv`)
 - The built-in Shortcuts app
 
-Place this folder at `~/.ocr-env`, then run:
+Clone this repo at `~`, then run:
 
 ```bash
-cd "$HOME/.ocr-env"
+cd "$HOME/mac-ocr-clip"
 /bin/bash setup.sh
 ```
 
